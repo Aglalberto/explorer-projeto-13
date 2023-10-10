@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: clamp(40%, 1% + 2vw, 62.5%);
+
+    --hue: 194;
+    --bg-color:hsl(var(--hue), 5%, 7%);
+    --text-color: hsl(var(--hue), 40%, 98%);
+    --primary-color:hsl(var(--hue), 6%, 21%);
+    --controls-bg-color:hsl(var(--hue), 9%, 89%);
+    --button-secondary:hsl(var(--hue), 6%, 21%);
+    --button-music-on:hsl(var(--hue), 63%, 55%);
+}
+
+html.light {
+
+    --text-color: hsl(var(--hue), 5%, 7%);
+    --bg-color: hsl(var(--hue), 40%, 98%);
+    --controls-bg-color:hsl(var(--hue), 9%, 89%);
+}
+
+html.light .ph-sun,
+html:not(.light) .ph-moon {
+    display: none;
+}
+
+#toggle-mode {
+    position: absolute;
+    right: 3.2rem;
+    top: 3.2rem;
+    font-size: 3.2rem;
+    line-height: 0;
+    color: var(--text-color);
+}
+
+.sr-only {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    overflow: hidden;
+    
+    margin: -1px;
+    padding: 0px;
+    border: 0;
+    appearance: none;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+
+    display: grid;
+    height: 100vh;
+    place-content: center;
+
+    
+}
+
+.container {
+    display: flex;
+    gap: 19.2rem;
+}
+
+.app {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.flex {
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+#timer {
+    font-size: 12.6rem;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+#controls {
+    padding: 2.2rem 4rem;
+    gap: 1.6rem;
+}
+
+button {
+    background-color: transparent;
+    border: 0;
+    color: var(--primary-color);
+    cursor: pointer;
+    font-size: 6.4rem;
+}
+
+.grid {
+    display: grid;
+    grid-gap: 3.2rem;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.button-box {
+    padding: 4.2rem 4rem;
+    background-color: var(--controls-bg-color);
+    border-radius: 2.4rem;
+}
+
+.secondary {
+    color: var(--button-secondary);
+}
+
+/* controls */
+
+.running .ph-play-circle,
+.running .ph-timer,
+html:not(.running) .ph-pause-circle,
+html:not(.running) .ph-stop-circle {
+    display: none;
+}
+
+.music-on {
+    background-color: var(--button-music-on);
+}
+
+.button-box-forest {
+    background-color: #68e45f;
+}
+
+.button-box-rain {
+    background-color: #ace9e9;
+}
+
+.button-box-store {
+    background-color: #f8e24f;
+}
+
+.button-box-fire {
+    background-color: #e14747;
+}

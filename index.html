@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus Timer - Pomodoro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-svg">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script type="module" src="./src/main.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <div class="app">
+            <button id="toggle-mode">
+                <span class="sr-only">Ativar Light Mode</span>
+                <i class="ph-bold ph-sun"></i>
+                <i class="ph-bold ph-moon"></i>
+            </button>
+            <section id="timer" class="flex">
+                <span id="minutes">00</span>
+                <span>:</span>
+                <span id="seconds">00</span>
+            </section>
+            <section id="controls" class="flex">
+                <button
+                data-action="toggleRunning"
+                class="ph ph-play-circle">
+                    <span class="sr-only">Iniciar contador</span>
+                </button>
+                <button
+                data-action="toggleRunning"
+                class="ph ph-pause-circle">
+                    <span class="sr-only">Pausar contador</span>
+                </button>
+                <button
+                data-action="set"
+                class="ph ph-timer secondary">
+                    <span class="sr-only">Ajustar contador</span>
+                </button>
+                <button
+                data-action="reset"
+                class="ph ph-stop-circle secondary">
+                    <span class="sr-only">Reiniciar contador</span>
+                </button>
+                <button
+                data-action="addMinutes"
+                class="ph ph-plus-circle">
+                    <span class="sr-only">Add time</span>
+                </button>
+                <button
+                data-action="subtractMinutes"
+                class="ph ph-minus-circle">
+                    <span class="sr-only">Remove time</span>
+                </button>
+            </section>
+        </div>
+        <div class="app-bgm">
+            <section id="controls-2" class="grid">
+                <div class="button-box" id="forestButton">
+                    <button
+                    id="toggleForestSound"
+                    data-action="toggleForestSound"
+                    class="ph ph-tree-evergreen">
+                        <span class="sr-only">Arvore</span>
+                    </button>
+
+                </div>
+                <div class="button-box" id="rainButton">
+                    <button
+                    id="toggleRainSound"
+                    data-action="toggleRainSound"
+                    class="ph ph-cloud-snow">   
+                        <span class="sr-only">Chuva</span>
+                    </button>
+                   
+                </div>
+                <div class="button-box" id="storeButton">
+                    <button
+                    id="toggleStoreSound"
+                    data-action="toggleStoreSound"
+                    class="ph ph-storefront">
+                        <span class="sr-only">Loja</span>
+                    </button>
+                   
+                </div>
+                <div class="button-box" id="fireButton">
+                    <button
+                    id="toggleFireSound"
+                    data-action="toggleFireSound"
+                    class="ph ph-flame">
+                        <span class="sr-only">Fogueira</span>
+                    </button>
+                    
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
